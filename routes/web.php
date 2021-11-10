@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controlador;
 use App\Http\Controllers\CategoryController;
+
 use Illuminate\Support\Facades\Auth;
 
 
@@ -22,6 +23,8 @@ Route::prefix('web')->group(function () {
 	Route::get('/usuario/delete/{usuario}', [Controlador::class,'delete'])->name('usuario.delete');
 
 	Route::resource('/category',CategoryController::class);
+    Route::resource('post', PostController::class);
+    Route::resource('category', CategoryController::class);z
 });
 
 
